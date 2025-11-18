@@ -1,0 +1,159 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Segoe UI", sans-serif;
+  background-color: #f8d2d5;
+  color: #333;
+  line-height: 1.6;
+  padding: 20px;
+}
+
+header,
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #7767e2;
+  color: white;
+}
+
+h1,
+h2 {
+  margin-bottom: 10px;
+}
+
+section {
+  margin: 40px 0;
+}
+
+/* Responsive Cards Section */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.card {
+  flex: 1 1 250px;
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-weight: bold;
+}
+
+/* Start Generation Here */
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: all 0.3s ease;
+}
+/* End Generation Here */
+
+/* Carousel Section */
+.carousel-section {
+  text-align: center;
+}
+
+.carousel {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.carousel img {
+  width: 100%;
+  max-width: 600px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 10px 16px;
+  cursor: pointer;
+  font-size: 24px;
+  border-radius: 50%;
+}
+
+.prev {
+  left: -40px;
+}
+
+.next {
+  right: -40px;
+}
+
+/* API Joke Section */
+.api-section {
+  text-align: center;
+}
+
+#joke-btn {
+  background-color: #7767e2;
+  color: white;
+  padding: 10px 18px;
+  font-size: 16px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+
+#joke-btn:hover {
+  background-color: #218838;
+  transition: all 0.3s ease;
+  transform: scale(1.05);
+  box-shadow: 0 6px 20px rgba(119, 103, 226, 0.4);
+}
+
+#joke {
+  font-size: 18px;
+  font-style: italic;
+  color: #555;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .card {
+    flex: 1 1 100%;
+  }
+
+  .carousel-btn.prev {
+    left: -20px;
+  }
+
+  .carousel-btn.next {
+    right: -20px;
+  }
+
+  #joke {
+    font-size: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 22px;
+  }
+
+  h2 {
+    font-size: 18px;
+  }
+
+  #joke-btn {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}
